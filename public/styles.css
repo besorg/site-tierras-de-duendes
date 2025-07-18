@@ -10,7 +10,7 @@ A/* === Variables de Tema === */
   --header-text: #fce4ec;
   --modal-bg: #333333;
   --modal-text: #fce4ec;
-  --footer-bg: #1a1a1a;
+  --footer-bg: #2e2a23;
   --footer-text: #fce4ec;
 }
 
@@ -24,10 +24,10 @@ A/* === Variables de Tema === */
 
   --header-bg: #fce4ec;
   --header-text: #333333;
-  --modal-bg: #ffffff;
-  --modal-text: #1a1a1a;
+  --modal-bg: #fcfdf7;
+  --modal-text: #2e2a23;
   --footer-bg: #ec407a;
-  --footer-text: #ffffff;
+  --footer-text: #fcfdf7;
 }
 
 

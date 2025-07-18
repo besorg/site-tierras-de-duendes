@@ -2,29 +2,29 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Topísima - Estética Capilar">
+<Layout title="Tierra de Duendes - Ropa Mágica">
   <section class="hero">
     <div class="hero-content">
       <div class="hero-column">
-        <img src="/images/logo.png" alt="Logo Topísima" class="hero-logo" />
+        <img src="/images/logo.png" alt="Logo Tierra de Duendes" class="hero-logo" />
       </div>
       <div class="hero-column">
-        <h1>Tratamientos capilares que realzan tu belleza</h1>
-        <p>Viernes de 15 a 20hs<br />Sábados de 8 a 20hs<br />Domingos de 8 a 13hs</p>
-        <a id="whatsapp-button" class="btn hero-btn" target="_blank">Reservá tu turno</a>
+        <h1>Ropa encantada para perros, niños y adultos</h1>
+        <p>Lunes a sábado<br />10:00 a 18:00</p>
+        <a id="whatsapp-button" class="btn hero-btn" target="_blank">Hacer un pedido</a>
       </div>
     </div>
   </section>
 
   <section class="menu" id="menu">
-    <h2>Tratamientos</h2>
-    <p class="menu-subtitle">¡Agendá tu turno hoy y sentite radiante con un estilo perfecto!</p>
+    <h2>Catálogo</h2>
+    <p class="menu-subtitle">Explorá nuestra colección mágica de prendas para todos los tamaños y mundos</p>
     <div class="duende-list two-columns" id="duende-list"></div>
   </section>
 
   <section class="about" id="about">
     <h2>Sobre Nosotros</h2>
-    <p>Somos Topísimas, un espacio dedicado a la belleza y salud capilar. Ofrecemos tratamientos personalizados como corte, coloración, botox capilar, alisado y shock de keratina, pensados para realzar tu estilo y cuidar tu cabello con productos de alta calidad y atención profesional.</p>
+    <p>Somos Tierra de Duendes, una tienda artesanal de ropa inspirada en la fantasía y la naturaleza. Diseñamos prendas únicas para perros, niños y adultos con materiales de calidad, estilo mágico y mucho amor.</p>
   </section>
 
   <section class="reviews" id="reviews">
@@ -33,15 +33,15 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <section class="cta-reserva cta-section">
-    <h3 class="cta-message">¡Agendá tu turno hoy y sentite radiante con un estilo perfecto!</h3>
-    <a class="btn" href="https://wa.me/5491165565637?text=¡Hola! Quiero agendar un turno." target="_blank">Agendar por WhatsApp</a>
+    <h3 class="cta-message">¡Viví la magia! Pedí tu prenda encantada hoy mismo</h3>
+    <a class="btn" href="https://wa.me/5491132776974?text=¡Hola! Quiero hacer un pedido." target="_blank">Pedir por WhatsApp</a>
   </section>
 
   <section class="contact" id="contact">
     <h2>Contacto</h2>
-    <p>Contactanos por nuestras redes sociales o reservá tu turno directamente.</p>
+    <p>Escribinos por redes sociales o pedí directamente por WhatsApp.</p>
     <div class="contact-methods">
-      <a href="https://instagram.com/Topiisiimas" target="_blank">
+      <a href="https://instagram.com/tierradeduendes" target="_blank">
         <img src="/images/instagram-icon.png" alt="Instagram" class="icon" />
       </a>
       <a id="wa-link" href="#" target="_blank">
@@ -51,7 +51,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <footer class="footer">
-    <p>&copy; Topisimas Todos los derechos reservados.</p>
+    <p>&copy; Tierra de Duendes. Todos los derechos reservados.</p>
     <p>
       Sitio desarrollado por <a href="https://marketing-bso.netlify.app/" target="_blank" style="color: inherit; text-decoration: underline;">BSO Web Studio</a>
     </p>
@@ -92,17 +92,17 @@ import Layout from '../layouts/Layout.astro';
         fetchCSV(urls.menu),
         fetchCSV(urls.reviews)
       ]).then(([menuRows, reviewsRows]) => {
-        const whatsapp = '5491165565637';
+        const whatsapp = '5491132776974';
         window.dynamicWhatsapp = whatsapp;
 
         const whatsappButton = document.getElementById('whatsapp-button');
         if (whatsappButton && whatsapp) {
-          whatsappButton.href = `https://wa.me/${whatsapp}?text=${encodeURIComponent("¡Hola! Quiero agendar un turno.")}`;
+          whatsappButton.href = `https://wa.me/${whatsapp}?text=${encodeURIComponent("¡Hola! Quiero hacer un pedido.")}`;
         }
 
         const whatsappLink = document.getElementById('wa-link');
         if (whatsappLink && whatsapp) {
-          whatsappLink.href = `https://wa.me/${whatsapp}?text=${encodeURIComponent("¡Hola! Quiero agendar un turno.")}`;
+          whatsappLink.href = `https://wa.me/${whatsapp}?text=${encodeURIComponent("¡Hola! Quiero hacer un pedido.")}`;
         }
 
         const products = menuRows
@@ -114,19 +114,18 @@ import Layout from '../layouts/Layout.astro';
           }));
         window.dynamicProducts = products;
 
-const list = document.getElementById('duende-list');
-list.innerHTML = products.map((product) => `
-  <div class="duende-card">
-    <img src="${product.imagen}" alt="${product.nombre}" />
-    <div class="card-content">
-      <h3>${product.nombre}</h3>
-      <p>${product.descripcion}</p>
-    </div>
-    <a class="btn" href="https://wa.me/5491165565637?text=${encodeURIComponent('¡Hola! Quisiera ' + product.nombre)}" target="_blank">Reservar</a>
-  </div>
-`).join('');
+        const list = document.getElementById('duende-list');
+        list.innerHTML = products.map((product) => `
+          <div class="duende-card">
+            <img src="${product.imagen}" alt="${product.nombre}" />
+            <div class="card-content">
+              <h3>${product.nombre}</h3>
+              <p>${product.descripcion}</p>
+            </div>
+            <a class="btn" href="https://wa.me/5491132776974?text=${encodeURIComponent('¡Hola! Quisiera ' + product.nombre)}" target="_blank">Pedir</a>
+          </div>
+        `).join('');
 
-        // Reseñas
         const reviews = reviewsRows
           .filter(r => r.cita && r.autor)
           .map(r => `<div class="review"><p>“${r.cita.trim()}”</p><span>- ${r.autor.trim()}</span></div>`);

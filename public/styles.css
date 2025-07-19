@@ -260,6 +260,7 @@ img {
 }
 
 .price-line .btn {
+  text-align: right;
   margin-left: auto;
 }
 

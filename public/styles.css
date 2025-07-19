@@ -25,8 +25,8 @@
   --header-text: #1b5e20;
   --modal-bg: #ffffff;
   --modal-text: #3e2723;
-  --footer-bg: #a5d6a7;
-  --footer-text: #1b5e20;
+  --footer-bg: #000000;
+  --footer-text: #ffffff;
 }
 
 header {

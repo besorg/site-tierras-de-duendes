@@ -252,8 +252,10 @@ img {
 
 .price-line {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente */
+  justify-content: center;
+  gap: 0.5rem;
   width: 100%;
   margin-top: auto;
   padding-top: 0.5rem;
@@ -263,11 +265,11 @@ img {
   font-weight: bold;
   font-size: 1.1rem;
   color: var(--accent-color);
-  text-align: right;
+  text-align: center;
 }
 
 .price-line .btn {
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 /* === Sobre Nosotros === */

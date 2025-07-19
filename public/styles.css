@@ -200,7 +200,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   text-align: center;
   box-sizing: border-box;
 }
@@ -218,8 +218,9 @@ img {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 100%;
+  gap: 0.5rem;
 }
 
 .product-card h3 {
@@ -241,22 +242,26 @@ img {
   height: calc(1.5em * 7);
 }
 
-.product-card .btn {
-  margin-top: 0.5rem;
-  align-self: center;
-}
-
 .price-line {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
 }
 
 .price-line .price {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--accent-color);
   margin-left: auto;
   text-align: right;
+}
+
+.product-card .btn {
+  align-self: center;
+  margin-top: 0.75rem;
 }
 
 /* === Sobre Nosotros === */

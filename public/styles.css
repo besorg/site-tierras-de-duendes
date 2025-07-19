@@ -160,6 +160,7 @@ img {
   font-size: 1rem;
   cursor: pointer;
   text-decoration: none;
+  display: inline-block;
 }
 
 /* === Menú === */
@@ -243,6 +244,19 @@ img {
 .product-card .btn {
   margin-top: 0.5rem;
   align-self: center;
+}
+
+.price-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.price-line .price {
+  margin-left: auto;
+  text-align: right;
 }
 
 /* === Sobre Nosotros === */
@@ -412,13 +426,6 @@ img {
   cursor: pointer;
 }
 
-.price-line {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
 .close {
   position: absolute;
   top: 10px;
@@ -441,6 +448,7 @@ img {
 .price {
   font-weight: bold;
   font-size: 1.1rem;
-  margin: 0.5rem 0;
   color: var(--accent-color);
+  text-align: right;
+  width: 100%;
 }

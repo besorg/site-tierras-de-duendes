@@ -196,11 +196,8 @@ img {
   padding: 1rem;
   max-width: 400px;
   width: 100%;
-  height: 600px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
   text-align: center;
   box-sizing: border-box;
 }
@@ -215,12 +212,11 @@ img {
 }
 
 .card-content {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  gap: 0.5rem;
+  flex-grow: 1;
 }
 
 .product-card h3 {
@@ -247,21 +243,19 @@ img {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: auto;
-  padding-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .price-line .price {
   font-weight: bold;
   font-size: 1.1rem;
   color: var(--accent-color);
-  margin-left: auto;
   text-align: right;
+  flex-grow: 1;
 }
 
-.product-card .btn {
-  align-self: center;
-  margin-top: 0.75rem;
+.price-line .btn {
+  margin-left: auto;
 }
 
 /* === Sobre Nosotros === */

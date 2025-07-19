@@ -123,8 +123,10 @@ import Layout from '../layouts/Layout.astro';
             <div class="card-content">
               <h3>${product.nombre}</h3>
               <p>${product.descripcion}</p>
-              <p class="price">$${product.precio}</p>
-              <a class="btn" href="https://wa.me/5491132776974?text=${encodeURIComponent('¡Hola! Quisiera encargar el producto "' + product.nombre + '". ¿Cómo hacemos?')}" target="_blank">Pedir</a>
+              <div class="price-line">
+                <p class="price">$${product.precio}</p>
+                <a class="btn" href="https://wa.me/5491132776974?text=${encodeURIComponent('¡Hola! Quisiera encargar el producto "' + product.nombre + '". ¿Cómo hacemos?')}" target="_blank">Pedir</a>
+              </div>
             </div>
           </div>
         `).join('');

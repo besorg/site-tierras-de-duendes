@@ -19,7 +19,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="menu" id="menu">
     <h2>Catálogo</h2>
     <p class="menu-subtitle">Explorá nuestra colección mágica de prendas para todos los tamaños y mundos</p>
-    <div class="burger-list" id="burger-list"></div>
+    <div class="product-list" id="product-list"></div>
   </section>
 
   <section class="about" id="about">
@@ -108,28 +108,26 @@ import Layout from '../layouts/Layout.astro';
         const products = menuRows
           .filter(row => row.nombre && row.imagen)
           .map(row => ({
-  nombre: row.nombre,
-  descripcion: row.descripcion,
-  imagen: row.imagen,
-  precio: row.precio
-}));
+            nombre: row.nombre,
+            descripcion: row.descripcion,
+            imagen: row.imagen,
+            precio: row.precio
+          }));
 
         window.dynamicProducts = products;
 
-        const list = document.getElementById('burger-list');
+        const list = document.getElementById('product-list');
         list.innerHTML = products.map((product) => `
-  <div class="duende-card">
-    <img src="${product.imagen}" alt="${product.nombre}" />
-    <div class="card-content">
-      <h3>${product.nombre}</h3>
-      <p>${product.descripcion}</p>
-      <p class="price">$${product.precio}</p>
-    </div>
-    <a class="btn" href="https://wa.me/5491132776974?text=${encodeURIComponent('¡Hola! Quisiera encargar el producto "' + product.nombre + '". ¿Cómo hacemos?')}" target="_blank">Pedir</a>
-  </div>
-`).join('');
-
-
+          <div class="product-card">
+            <img src="${product.imagen}" alt="${product.nombre}" />
+            <div class="card-content">
+              <h3>${product.nombre}</h3>
+              <p>${product.descripcion}</p>
+              <p class="price">$${product.precio}</p>
+            </div>
+            <a class="btn" href="https://wa.me/5491132776974?text=${encodeURIComponent('¡Hola! Quisiera encargar el producto "' + product.nombre + '". ¿Cómo hacemos?')}" target="_blank">Pedir</a>
+          </div>
+        `).join('');
 
         const reviews = reviewsRows
           .filter(r => r.cita && r.autor)

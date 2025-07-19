@@ -108,10 +108,12 @@ import Layout from '../layouts/Layout.astro';
         const products = menuRows
           .filter(row => row.nombre && row.imagen)
           .map(row => ({
-            nombre: row.nombre,
-            descripcion: row.descripcion,
-            imagen: row.imagen
-          }));
+  nombre: row.nombre,
+  descripcion: row.descripcion,
+  imagen: row.imagen,
+  precio: row.precio
+}));
+
         window.dynamicProducts = products;
 
         const list = document.getElementById('burger-list');
@@ -126,8 +128,6 @@ import Layout from '../layouts/Layout.astro';
     <a class="btn" href="https://wa.me/5491132776974?text=${encodeURIComponent('¡Hola! Quisiera encargar el producto "' + product.nombre + '". ¿Cómo hacemos?')}" target="_blank">Pedir</a>
   </div>
 `).join('');
-
-
 
 
 

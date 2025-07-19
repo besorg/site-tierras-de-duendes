@@ -34,7 +34,7 @@ import Layout from '../layouts/Layout.astro';
 
   <section class="cta-reserva cta-section">
     <h3 class="cta-message">¡Viví la magia! Pedí tu prenda encantada hoy mismo</h3>
-    <a class="btn" href="https://wa.me/5491132776974?text=¡Hola! Quiero hacer un pedido." target="_blank">Pedir por WhatsApp</a>
+    <a class="btn" href="https://wa.me/5491133058099?text=¡Hola! Quiero hacer un pedido." target="_blank">Pedir por WhatsApp</a>
   </section>
 
   <section class="contact" id="contact">
@@ -92,7 +92,7 @@ import Layout from '../layouts/Layout.astro';
         fetchCSV(urls.menu),
         fetchCSV(urls.reviews)
       ]).then(([menuRows, reviewsRows]) => {
-        const whatsapp = '5491132776974';
+        const whatsapp = '5491133058099';
         window.dynamicWhatsapp = whatsapp;
 
         const whatsappButton = document.getElementById('whatsapp-button');
@@ -125,7 +125,7 @@ list.innerHTML = products.map((product) => `
       <p class="card-desc">${product.descripcion}</p>
       <div class="price-line">
         <p class="price">$${product.precio}</p>
-        <a class="btn pedir-btn" href="https://wa.me/5491132776974?text=${encodeURIComponent('¡Hola! Quisiera encargar el producto "' + product.nombre + '". ¿Cómo hacemos?')}" target="_blank">Pedir</a>
+        <a class="btn pedir-btn" href="https://wa.me/5491133058099?text=${encodeURIComponent('¡Hola! Quisiera encargar el producto "' + product.nombre + '". ¿Cómo hacemos?')}" target="_blank">Pedir</a>
       </div>
     </div>
   </div>

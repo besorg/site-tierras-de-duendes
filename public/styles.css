@@ -245,12 +245,14 @@ img {
 
 .price-line {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   width: 100%;
   margin-top: auto;
   padding-top: 0.5rem;
+  gap: 0.25rem;
 }
+
 
 .price-line .price {
   font-weight: bold;
@@ -259,10 +261,13 @@ img {
   text-align: center;
 }
 
-.card-content .btn {
-  text-align: center;
+.pedir-btn {
   margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+  display: block;
 }
+
 
 /* === Sobre Nosotros === */
 .about {

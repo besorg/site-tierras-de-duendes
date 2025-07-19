@@ -116,20 +116,21 @@ import Layout from '../layouts/Layout.astro';
 
         window.dynamicProducts = products;
 
-        const list = document.getElementById('product-list');
-        list.innerHTML = products.map((product) => `
-          <div class="product-card">
-            <img src="${product.imagen}" alt="${product.nombre}" />
-            <div class="card-content">
-              <h3>${product.nombre}</h3>
-              <p>${product.descripcion}</p>
-              <div class="price-line">
-                <p class="price">$${product.precio}</p>
-              </div>
-              <a class="btn" href="https://wa.me/5491132776974?text=${encodeURIComponent('¡Hola! Quisiera encargar el producto "' + product.nombre + '". ¿Cómo hacemos?')}" target="_blank">Pedir</a>
-            </div>
-          </div>
-        `).join('');
+const list = document.getElementById('product-list');
+list.innerHTML = products.map((product) => `
+  <div class="product-card">
+    <img src="${product.imagen}" alt="${product.nombre}" />
+    <div class="card-content">
+      <h3>${product.nombre}</h3>
+      <p class="card-desc">${product.descripcion}</p>
+      <div class="price-line">
+        <p class="price">$${product.precio}</p>
+        <a class="btn pedir-btn" href="https://wa.me/5491132776974?text=${encodeURIComponent('¡Hola! Quisiera encargar el producto "' + product.nombre + '". ¿Cómo hacemos?')}" target="_blank">Pedir</a>
+      </div>
+    </div>
+  </div>
+`).join('');
+
 
         const reviews = reviewsRows
           .filter(r => r.cita && r.autor)

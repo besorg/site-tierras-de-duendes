@@ -19,7 +19,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="menu" id="menu">
     <h2>Catálogo</h2>
     <p class="menu-subtitle">Explorá nuestra colección mágica de prendas para todos los tamaños y mundos</p>
-    <div class="duende-list two-columns" id="duende-list"></div>
+    <div class="burger-list" id="burger-list"></div>
   </section>
 
   <section class="about" id="about">
@@ -114,9 +114,9 @@ import Layout from '../layouts/Layout.astro';
           }));
         window.dynamicProducts = products;
 
-        const list = document.getElementById('duende-list');
+        const list = document.getElementById('burger-list');
         list.innerHTML = products.map((product) => `
-          <div class="duende-card">
+          <div class="burger-card">
             <img src="${product.imagen}" alt="${product.nombre}" />
             <div class="card-content">
               <h3>${product.nombre}</h3>

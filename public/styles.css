@@ -256,11 +256,11 @@ img {
   font-weight: bold;
   font-size: 1.1rem;
   color: var(--accent-color);
-  text-align: right;
+  text-align: center;
 }
 
 .price-line .btn {
-  text-align: right;
+  text-align: center;
   margin-left: auto;
 }
 

@@ -253,6 +253,10 @@ img {
   gap: 0.25rem;
 }
 
+.btn:hover {
+  background-color: #2e7d32;
+  transform: scale(1.05);
+}
 
 .price-line .price {
   font-weight: bold;

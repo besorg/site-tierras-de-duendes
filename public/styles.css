@@ -1,33 +1,32 @@
-A/* === Variables de Tema === */
+/* === Variables de Tema === */
 :root {
-  --bg-color: #2c2c2c;
-  --text-color: #fce4ec;
-  --accent-color: #f06292;
-  --card-bg: #424242;
-  --border-color: #666666;
+  --bg-color: #e8f5e9;
+  --text-color: #3e2723;
+  --accent-color: #a5d6a7;
+  --card-bg: #f1f8e9;
+  --border-color: #c8e6c9;
 
-  --header-bg: #2c2c2c;
-  --header-text: #fce4ec;
-  --modal-bg: #333333;
-  --modal-text: #fce4ec;
-  --footer-bg: #2e2a23;
-  --footer-text: #fce4ec;
+  --header-bg: #c5e1a5;
+  --header-text: #1b5e20;
+  --modal-bg: #ffffff;
+  --modal-text: #3e2723;
+  --footer-bg: #a5d6a7;
+  --footer-text: #1b5e20;
 }
 
-
 .dark {
-  --bg-color: #fce4ec;
-  --text-color: #333333;
-  --accent-color: #ec407a;
-  --card-bg: #f8bbd0;
-  --border-color: #e0e0e0;
+  --bg-color: #1b5e20;
+  --text-color: #e8f5e9;
+  --accent-color: #66bb6a;
+  --card-bg: #2e7d32;
+  --border-color: #81c784;
 
-  --header-bg: #fce4ec;
-  --header-text: #333333;
-  --modal-bg: #fcfdf7;
-  --modal-text: #2e2a23;
-  --footer-bg: #ec407a;
-  --footer-text: #fcfdf7;
+  --header-bg: #33691e;
+  --header-text: #e8f5e9;
+  --modal-bg: #263238;
+  --modal-text: #ffffff;
+  --footer-bg: #2e7d32;
+  --footer-text: #e8f5e9;
 }
 
 
@@ -264,7 +263,7 @@ img {
 
 /* === Reseñas === */
 .reviews {
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1rem 1rem; /* reducido padding-bottom */
   background-color: var(--card-bg);
   text-align: center;
 }
@@ -273,43 +272,40 @@ img {
   margin-bottom: 1.5rem;
 }
 
-#reviews-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
+.review-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 0; /* quita cualquier espacio debajo del grid de reseñas */
 }
 
-.review {
-  background-color: var(--bg-color);
-  border: 1px solid var(--border-color);
+.review-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 360px;
+  height: 576px;
+}
+
+.review-card img {
+  width: 420px;
+  height: 576px;
   border-radius: 8px;
-  padding: 1rem;
-  font-style: italic;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  position: relative;
-  text-align: left;
+  object-fit: cover;
 }
 
-.review::before {
-  content: "\201C";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  font-size: 6rem;
-  color: var(--border-color);
-  opacity: 0.1;
-  line-height: 1;
-}
-
-.review span {
-  display: block;
-  margin-top: 0.75rem;
-  font-style: normal;
+.review-author {
+  margin-top: 0.5rem;
   font-weight: bold;
+  text-align: center;
   color: var(--text-color);
-  text-align: right;
 }
 
 /* === Llamado a la acción === */
